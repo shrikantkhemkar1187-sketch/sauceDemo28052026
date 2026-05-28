@@ -1,0 +1,35 @@
+{
+  "name": "saucedemo-playwright-bdd-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env BROWSER=chrome npx cucumber-js",
+    "chrome": "cross-env BROWSER=chrome npx cucumber-js",
+    "firefox": "cross-env BROWSER=firefox npx cucumber-js",
+    "webkit": "cross-env BROWSER=webkit npx cucumber-js",
+    "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
+    "allure:open": "allure open reports/allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.9.0",
+    "allure-cucumberjs": "^3.9.0",
+    "allure-js-commons": "^3.9.0",
+    "cross-env": "^10.1.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "dotenv": "^17.4.2",
+    "fs-extra": "^11.3.5",
+    "moment": "^2.30.1",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "playwright": "^1.60.0",
+    "winston": "^3.19.0"
+  }
+}
