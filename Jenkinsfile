@@ -35,13 +35,7 @@ stages {
         }
     }
 
-    stage('Generate Allure Report') {
-
-        steps {
-
-            bat 'allure generate reports/allure-results --clean -o reports/allure-report'
-        }
-    }
+    
 }
 
 post {
