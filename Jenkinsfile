@@ -39,7 +39,7 @@ stages {
 
         steps {
 
-            bat 'npm run allure:generate'
+            bat 'allure generate reports/allure-results --clean -o reports/allure-report'
         }
     }
 }
@@ -59,6 +59,7 @@ post {
             reportFiles: 'cucumber-report.html',
             reportName: 'Cucumber HTML Report'
         ])
+        allure([ includeProperties: false, jdk: '', results: [[path: 'reports/allure-results']] ])
     }
 
     success {
