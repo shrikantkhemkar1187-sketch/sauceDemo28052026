@@ -11,6 +11,7 @@ const logger = require('../utils/logger');
 let loginPage;
 let inventoryPage;
 
+
 Given('user launches sauce demo application', async function () {
 
     loginPage = new LoginPage(this.page);
